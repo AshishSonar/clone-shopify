@@ -1,12 +1,714 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopify</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css"
+    integrity="sha384-z4tVnCr80ZcL0iufVdGQSUzNvJsKjEtqYZjiQrrYKlpGow+btDHDfQWkFjoaz/Zr" crossorigin="anonymous" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            black: "#000000",
+            bglight: "#FBF7ED",
+            green: "#004C3F",
+            lightgreen: "#008060",
+            darkgreen: "#002E25",
+            white: "#FFFFFF",
+            hblack: "#212326",
+            bodyblack: "#6B7177",
+            offwhite: "#F3FCF4",
+            textlight: "#b6babf"
+          },
+          fontFamily: {
+            montserrat: ["Montserrat", "sans-serif"],
+          },
+          width: {
+            "1/7": "14.2857143%",
+            "2/7": "28.5714286%",
+            "3/7": "42.8571429%",
+            "4/7": "57.1428571%",
+            "5/7": "71.4285714%",
+            "6/7": "85.7142857%",
+          },
+        },
+      },
+    };
+  </script>
+  <title>Shopify</title>
 </head>
-<body>
-    
+
+<body class="font-montserrat">
+  <!-- Header -->
+  <header class="text-hblack bg-bglight sticky top-0 z-10 0">
+    <div class="container mx-auto flex p-5 items-center justify-between">
+      <a class="mb-4 md:mb-0 ">
+        <img src="./images/shopify-logo.png" alt="" class="h-[35px]" />
+      </a>
+      <nav
+        class="hidden md:flex font-semibold text-[17px] md:mr-auto md:ml-4 md:py-1 md:pl-4 flex-wrap items-center justify-center">
+        <a class="mr-5 flex mr-5 items-center">Start
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="h-3 ml-2">
+            <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+            <path
+              d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
+          </svg>
+        </a>
+        <a class="mr-5 flex mr-5 items-center">Sell
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="h-3 ml-2">
+            <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+            <path
+              d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
+          </svg>
+        </a>
+        <a class="mr-5 flex mr-5 items-center">Market
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="h-3 ml-2">
+            <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+            <path
+              d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
+          </svg>
+        </a>
+        <a class="mr-5 flex mr-5 items-center">Manage
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="h-3 ml-2">
+            <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+            <path
+              d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
+          </svg>
+        </a>
+      </nav>
+      <nav class="hidden md:flex font-semibold text-[17px] md:ml-4 md:py-1 md:pl-4 flex-wrap items-center justify-center">
+        <a class="mr-5">Pricing</a>
+        <a class="flex mr-5 items-center">Learn
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="h-3 ml-2">
+            <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+            <path
+              d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
+          </svg>
+        </a>
+        <a class="mr-5">Log in</a>
+      </nav>
+      <button
+        class="hidden md:inline font-semibold text-[16px] text-white bg-lightgreen hover:bg-green border-0 py-3 px-6 focus:outline-none rounded mt-4 md:mt-0">
+        Try for free
+      </button>
+      <div class="flex md:hidden items-center justify-between">
+        <button
+        class="font-semibold text-[16px] text-hblack py-3 px-3 ">
+        Log in
+      </button>
+      <svg class="h-5 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="text-hblack bg-bglight">
+    <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+      <div
+        class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+        <h1 class="text-green font-extrabold md:text-[48px] sm:[38px] text-[28px] mb-4 leading-[60px]">
+          The easiest way to sell online in India
+        </h1>
+        <p class="text-[20px] mb-8 leading-normal">
+          Try one of the most powerful platforms on the market for free. No
+          technical knowledge needed.
+        </p>
+        <div class="flex w-full md:justify-start justify-center items-end">
+          <div class="relative mr-4 md:w-full lg:w-full xl:w-1/2 w-2/4">
+            <input type="text" id="hero-field" name="hero-field"
+              class="w-full bg-white rounded border border-black focus:ring-2 focus:ring-green focus:border-green outline-none text-black py-3 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              placeholder="Enter your email address" />
+          </div>
+          <button
+            class="inline-flex text-white bg-lightgreen border-0 py-4 px-6 focus:outline-none hover:bg-green rounded text-[16px] font-bold">
+            Try For Free
+          </button>
+        </div>
+        <p class="text-[12px] mt-4 mb-8 w-full">
+          Try Shopify free for 3 days, no credit card required. By entering
+          your email, you agree to receive marketing emails from Shopify.
+        </p>
+        <div class="flex lg:flex-row md:flex-col text-gray-300"></div>
+      </div>
+      <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+        <img class="object-cover object-center rounded" alt="hero" src="./images/hero-image.jpg" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Examples section -->
+  <section class="text-white bg-green">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-col w-full mb-20">
+        <h1 class="text-[40px] font-medium mb-4">
+          Bring your business online
+        </h1>
+        <p class="leading-relaxed text-[16px]">
+          Create an ecommerce website backed by powerful tools that help you
+          find customers, drive sales, and manage your day-to-day.
+        </p>
+        <a href="" class="flex items-center mt-4">
+          <h3 class="text-[16px] font-bold">
+            Explore more examples
+          </h3>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-4 ml-2" svg fill="currentColor">
+            <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+            <path
+              d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+          </svg>
+        </a>
+      </div>
+      <div class="flex flex-wrap -m-4">
+        <div class="p-4 lg:w-1/5 md:w-1/2">
+          <div class="h-full flex flex-col items-center">
+            <img alt="examples" class="flex-shrink-0 w-full object-cover object-center mb-4" src="./images/ex1.jpg" />
+            <div class="w-full">
+              <h2 class="font-semibold text-[14px] hover:underline ">
+                FOOD & DRINK
+              </h2>
+              <h3 class="text-[18px] font-normal mb-3">Blue Tokai</h3>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 lg:w-1/5 md:w-1/2">
+          <div class="h-full flex flex-col items-center">
+            <img alt="examples" class="flex-shrink-0 w-full object-cover object-center mb-4" src="./images/ex1.jpg" />
+            <div class="w-full">
+              <h2 class="font-semibold text-[14px] hover:underline ">
+                JEWELRY
+              </h2>
+              <h3 class="text-[18px] font-normal mb-3">Quirksmith</h3>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 lg:w-1/5 md:w-1/2">
+          <div class="h-full flex flex-col items-center">
+            <img alt="examples" class="flex-shrink-0 w-full object-cover object-center mb-4" src="./images/ex1.jpg" />
+            <div class="w-full">
+              <h2 class="font-semibold text-[14px] hover:underline ">
+                ELECTRONICS
+              </h2>
+              <h3 class="text-[18px] font-normal mb-3">Crossbeats</h3>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 lg:w-1/5 md:w-1/2">
+          <div class="h-full flex flex-col items-center">
+            <img alt="examples" class="flex-shrink-0 w-full object-cover object-center mb-4" src="./images/ex1.jpg" />
+            <div class="w-full">
+              <h2 class="font-semibold text-[14px] hover:underline ">
+                BEAUTY
+              </h2>
+              <h3 class="text-[18px] font-normal mb-3">Mcaffeine</h3>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 lg:w-1/5 md:w-1/2">
+          <div class="h-full flex flex-col items-center">
+            <img alt="examples" class="flex-shrink-0 w-full object-cover object-center mb-4" src="./images/ex1.jpg" />
+            <div class="w-full">
+              <h2 class="font-semibold text-[14px] hover:underline ">
+                FASHION
+              </h2>
+              <h3 class="text-[18px] font-normal mb-3">Bunaai</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container px-5 py-12 mx-auto">
+      <div class="flex flex-col w-full mb-4">
+        <h1 class="text-[30px] font-medium mb-4">
+          Take the best path forward
+        </h1>
+      </div>
+      <div class="flex flex-wrap -m-4">
+        <div class="p-4 lg:w-1/4 md:w-1/2">
+          <div class="h-full flex flex-col">
+            <img alt="path" class="w-12 mb-4" src="./images/store.png" />
+            <div class="w-full">
+              <h2 class="font-semibold text-[18px] hover:underline mb-3">
+                Start an online business
+              </h2>
+              <p class="text-[16px] font-normal mb-3">Create a business, whether you’ve got a fresh idea or are looking
+                for a new way to make money.</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 lg:w-1/4 md:w-1/2">
+          <div class="h-full flex flex-col">
+            <img alt="path" class="w-12 mb-4" src="./images/store.png" />
+            <div class="w-full">
+              <h2 class="font-semibold text-[18px] hover:underline mb-3">
+                Move your business online
+              </h2>
+              <p class="text-[16px] font-normal mb-3">Turn your retail store into an online store and keep serving
+                customers without missing a beat.</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 lg:w-1/4 md:w-1/2">
+          <div class="h-full flex flex-col">
+            <img alt="path" class="w-12 mb-4" src="./images/store.png" />
+            <div class="w-full">
+              <h2 class="font-semibold text-[18px] hover:underline mb-3">
+                Switch to Shopify
+              </h2>
+              <p class="text-[16px] font-normal mb-3">Bring your business to Shopify, no matter which ecommerce platform
+                you’re currently using.</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 lg:w-1/4 md:w-1/2">
+          <div class="h-full flex flex-col">
+            <img alt="path" class="w-12 mb-4" src="./images/store.png" />
+            <div class="w-full">
+              <h2 class="font-semibold text-[18px] hover:underline mb-3">
+                Hire a Shopify expert
+              </h2>
+              <p class="text-[16px] font-normal mb-3">Get set up with the help of a trusted freelancer or agency from
+                the Shopify Experts Marketplace.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- features  section -->
+  <section class="text-bgtext bg-white">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-col w-full mb-20 items-center">
+        <h1 class="text-[40px] font-normal mb-4">
+          With you wherever you’re going
+        </h1>
+        <p class="leading-relaxed text-[20px] font-normal">
+          One platform with all the ecommerce and point of sale features you need to start,
+          run, and grow your business.
+        </p>
+
+      </div>
+      <div class="flex flex-wrap -m-4">
+        <div class="p-4 md:w-1/2">
+          <img alt="examples" class="flex-shrink-0 w-full object-cover object-center mb-4" src="./images/hero2.jpg" />
+        </div>
+        <div class="p-4 md:w-1/2">
+          <div class="h-full flex flex-col justify-center">
+            <div class="w-full">
+              <h2 class="font-normal text-[30px] mb-4">
+                Sell everywhere
+              </h2>
+              <p class="text-[16px] font-normal mb-3">Use one platform to sell products to anyone, anywhere—in person
+                with Point of Sale
+                and online through your website, social media, and online marketplaces.</p>
+              <a href="" class="flex items-center mt-4 text-green">
+                <h3 class="text-[16px] font-bold">
+                  Explore more examples
+                </h3>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-4 ml-2" svg fill="currentColor">
+                  <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                  <path
+                    d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-wrap -m-4">
+        <div class="p-4 md:w-1/2">
+          <div class="h-full flex flex-col justify-center">
+            <div class="w-full">
+              <h2 class="font-normal text-[30px] mb-4">
+                Market your business
+              </h2>
+              <p class="text-[16px] font-normal mb-3">Take the guesswork out of marketing with built-in tools that help
+                you create,
+                execute, and analyze digital marketing campaigns.</p>
+              <a href="" class="flex items-center mt-4 text-green">
+                <h3 class="text-[16px] font-bold">
+                  Explore how to market your business
+                </h3>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-4 ml-2" svg fill="currentColor">
+                  <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                  <path
+                    d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 md:w-1/2">
+          <img alt="examples" class="flex-shrink-0 w-full object-cover object-center mb-4" src="./images/market.jpg" />
+        </div>
+        <div class="flex flex-wrap -m-4">
+          <div class="p-4 md:w-1/2">
+            <img alt="examples" class="flex-shrink-0 w-full object-cover object-center mb-4" src="./images/hero2.jpg" />
+          </div>
+          <div class="p-4 md:w-1/2">
+            <div class="h-full flex flex-col justify-center">
+              <div class="w-full">
+                <h2 class="font-normal text-[30px] mb-4">
+                  Manage everything
+                </h2>
+                <p class="text-[16px] font-normal mb-3">Gain the insights you need to grow—use a single dashboard to
+                  manage orders, shipping, and payments anywhere you go.</p>
+                <a href="" class="flex items-center mt-4 text-green">
+                  <h3 class="text-[16px] font-bold">
+                    Explore how to manage your business
+
+                  </h3>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-4 ml-2" svg
+                    fill="currentColor">
+                    <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                    <path
+                      d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Explore more section -->
+  <section class="text-bgtext bg-offwhite">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-col w-full mb-20">
+        <h1 class="text-[30px] font-normal text-green mb-4">
+          Explore more from Shopify in India
+        </h1>
+      </div>
+      <div class="flex flex-wrap -m-4">
+        <div class="p-4 md:w-1/2 bg-white">
+          <div class="h-full flex flex-col justify-center">
+            <div class="w-full">
+              <h2 class="font-extrabold text-[14px] mb-4">
+                START
+              </h2>
+              <h2 class="font-normal text-[24px] mb-4">
+                Launch your store with the help of a Shopify Expert
+              </h2>
+              <p class="text-[16px] font-normal mb-3">Find hundreds of experts from India ready to help you get your
+                store up and
+                running, from choosing a theme to building a fully customized site.</p>
+              <a href="" class="flex items-center mt-4 text-green">
+                <h3 class="text-[16px] font-bold">
+                  Browse Experts in India
+                </h3>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-4 ml-2" svg fill="currentColor">
+                  <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                  <path
+                    d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 md:w-1/2">
+          <img alt="examples" class="flex-shrink-0 w-full object-cover object-center mb-4"
+            src="./images/india-experts.jpg" />
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Empowering independent business section -->
+  <section class="text-bgtext bg-white">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-col w-full mb-20">
+        <h1 class="text-[30px] font-normal mb-4">
+          Empowering independent business <br> owners everywhere
+        </h1>
+        <h2 class="text-[24px] font-normal mb-4">
+          Millions of businesses in <b>175 countries</b> around the world have <br> made over <b>$496 billion USD</b>
+          in sales using Shopify.
+        </h2>
+        <a href="" class="flex items-center mt-4 text-green">
+          <h3 class="text-[16px] font-bold">
+            Learn more about Shopify
+          </h3>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-4 ml-2" svg fill="currentColor">
+            <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+            <path
+              d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+          </svg>
+        </a>
+      </div>
+      <div class="flex flex-wrap -m-4">
+        <div class="md:w-1/2">
+          <img alt="examples" class="flex-shrink-0 w-full h-full object-cover object-center mb-4"
+            src="./images/alicia-souza-testimonialdesktop.jpg" />
+        </div>
+        <div class="p-4 md:w-1/2 bg-green text-white">
+          <div class="h-full flex flex-col justify-center items-center">
+            <div class="flex flex-col w-full text-center py-12">
+              <p class="font-bold text-[30px] mb-4 px-20">
+                “Shopify was my knight in shining armor when I exhausted every other possibility of getting my online
+                store up and running. It was stunningly easy to use,
+                with more features and plug-ins that I didn’t even know I wanted.”
+              </p>
+              <img src="./images/logo-alicia-souza-large.png" alt="" class="mx-auto w-[150px] my-4">
+              <h3 class="text-[20px] font-bold mb-3">Alicia | Alicia Souza</h3>
+              <a href="" class="flex items-center mt-4 text-green">
+                <h3 class="text-[16px] font-bold">
+                  Browse Experts in India
+                </h3>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-4 ml-2" svg fill="currentColor">
+                  <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                  <path
+                    d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="flex flex-wrap mt-4 items-center justify-center">
+        <div class="w-1/2 md:w-1/4 lg:w-1/7">
+          <img alt="icon" class="flex-shrink-0 w-36 object-cover object-center py-10" src="./images/bajaao-large.png" />
+        </div>
+        <div class="w-1/2 md:w-1/4 lg:w-1/7">
+          <img alt="icon" class="flex-shrink-0 w-36 object-cover object-center py-10"
+            src="./images/johnjacobs-large.png" />
+        </div>
+        <div class="w-1/2 md:w-1/4 lg:w-1/7">
+          <img alt="icon" class="flex-shrink-0 w-36 object-cover object-center py-10" src="./images/kylie-large.png" />
+        </div>
+        <div class="w-1/2 md:w-1/4 lg:w-1/7">
+          <img alt="icon" class="flex-shrink-0 w-36 object-cover object-center py-10" src="./images/nush-large.png" />
+        </div>
+        <div class="w-1/2 md:w-1/4 lg:w-1/7">
+          <img alt="icon" class="flex-shrink-0 w-36 object-cover object-center py-10"
+            src="./images/yogabar-large.png" />
+        </div>
+        <div class="w-1/2 md:w-1/4 lg:w-1/7">
+          <img alt="icon" class="flex-shrink-0 w-36 object-cover object-center py-10"
+            src="./images/starstruck-large.png" />
+        </div>
+        <div class="w-1/2 md:w-1/4 lg:w-1/7">
+          <img alt="icon" class="flex-shrink-0 w-36 object-cover object-center py-10"
+            src="./images/mcaffeine-large.png" />
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- support section -->
+  <section class="text-bgtext bg-bglight">
+    <div class="container flex flex-col md:flex-row mx-auto">
+      <div class="md:w-1/2 mt-20">
+        <h1 class="font-normal text-[40px] mb-8"> Get the help you need, <br> every step of the way </h1>
+        <div class="flex flex-col md:flex-row">
+          <div class="md:w-1/2">
+            <h3 class="font-semibold text-[18px] mb-4"> Shopify support </h3>
+            <p class="font-normal text-[16px]"> Contact support 24/7, whether you’re troubleshooting issues or looking
+              for business advice. </p>
+            <a href="" class="flex items-center mt-4 text-green">
+              <h3 class="text-[16px] font-bold">
+                Contact support
+              </h3>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-4 ml-2" svg fill="currentColor">
+                <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                <path
+                  d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+              </svg>
+            </a>
+          </div>
+          <div class="md:w-1/2">
+            <h3 class="font-semibold text-[18px] mb-4"> Shopify App Store </h3>
+            <p class="font-normal text-[16px]"> Add features and functionality to your business with 6,000+ apps that
+              integrate directly with Shopify. </p>
+            <a href="" class="flex items-center mt-4 text-green">
+              <h3 class="text-[16px] font-bold">
+                Visit the Shopify App Store
+              </h3>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-4 ml-2" svg fill="currentColor">
+                <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                <path
+                  d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="flex flex-col md:flex-row my-20">
+          <div class="md:w-1/2">
+            <h3 class="font-semibold text-[18px] mb-4"> Shopify Experts Marketplace </h3>
+            <p class="font-normal text-[16px]"> Hire a Shopify expert to help you with everything from store setup to
+              SEO. </p>
+            <a href="" class="flex items-center mt-4 text-green">
+              <h3 class="text-[16px] font-bold">
+                Explore the Shopify Experts Marketplace
+              </h3>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-4 ml-2" svg fill="currentColor">
+                <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                <path
+                  d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+              </svg>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="w-1/2">
+        <img alt="examples" class="flex-shrink-0 w-full h-full object-cover object-center mb-4"
+          src="./images/helpdesktop.jpg" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Start your business journey section -->
+  <section class="text-bgtext bg-white">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-col w-full mb-20 items-center justify-center">
+        <h1 class="text-[30px] font-normal mb-4">
+          Start your business journey with Shopify
+        </h1>
+        <h2 class="text-[18px] font-normal mb-4">
+          Try Shopify for free, and explore all the tools and services you need to start, run, and grow your business.
+        </h2>
+        <button
+          class="font-semibold text-[16px] text-white bg-lightgreen hover:bg-green border-0 py-3 px-6 focus:outline-none rounded mt-4 md:mt-0">
+          Start Free Trial
+        </button>
+      </div>
+    </div>
+  </section>
+
+   <!-- Footer section -->
+   <section class="text-white bg-darkgreen">
+    <div class="container px-5 py-12 mx-auto">
+      <div class="flex flex-col w-full mb-6">
+        <nav class="font-semibold text-[16px] md:py-1 flex flex-wrap items-center ">
+          <a class="mr-5 hover:underline underline-offset-[33px] decoration-4">About</a>
+          <a class="mr-5 hover:underline underline-offset-[33px] decoration-4">Careers </a>
+          <a class="mr-5 hover:underline underline-offset-[33px] decoration-4">Press and Media</a>
+          <a class="mr-5 hover:underline underline-offset-[33px] decoration-4">Shopify Plus</a>
+          <a class="mr-5 hover:underline underline-offset-[33px] decoration-4">Sitemap</a>
+        </nav>
+      </div>
+      <hr />
+      <div class="flex flex-wrap -m-4 mt-4">
+        <div class="p-4 lg:w-1/6 md:w-1/2 ">
+          <div class="h-full flex flex-col">
+            <div class="w-full">
+              <h2 class="font-extrabold text-[14px] mb-3">
+                ONLINE STORE
+              </h2>
+              <nav class="font-normal text-[14px] text-textlight md:py-1 flex flex-col flex-wrap ">
+                <a class="mb-2 hover:text-white">About</a>
+                <a class="mb-2 hover:text-white">Careers </a>
+                <a class="mb-2 hover:text-white">Press and Media</a>
+                <a class="mb-2 hover:text-white">Shopify Plus</a>
+                <a class="mb-2 hover:text-white">Sitemap</a>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 lg:w-1/6 md:w-1/2 ">
+          <div class="h-full flex flex-col">
+            <div class="w-full">
+              <h2 class="font-extrabold text-[14px] mb-3">
+                ONLINE STORE
+              </h2>
+              <nav class="font-normal text-[14px] text-textlight md:py-1 flex flex-col flex-wrap ">
+                <a class="mb-2 hover:text-white">About</a>
+                <a class="mb-2 hover:text-white">Careers </a>
+                <a class="mb-2 hover:text-white">Press and Media</a>
+                <a class="mb-2 hover:text-white">Shopify Plus</a>
+                <a class="mb-2 hover:text-white">Sitemap</a>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 lg:w-1/6 md:w-1/2 ">
+          <div class="h-full flex flex-col">
+            <div class="w-full">
+              <h2 class="font-extrabold text-[14px] mb-3">
+                ONLINE STORE
+              </h2>
+              <nav class="font-normal text-[14px] text-textlight md:py-1 flex flex-col flex-wrap ">
+                <a class="mb-2 hover:text-white">About</a>
+                <a class="mb-2 hover:text-white">Careers </a>
+                <a class="mb-2 hover:text-white">Press and Media</a>
+                <a class="mb-2 hover:text-white">Shopify Plus</a>
+                <a class="mb-2 hover:text-white">Sitemap</a>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 lg:w-1/6 md:w-1/2 ">
+          <div class="h-full flex flex-col">
+            <div class="w-full">
+              <h2 class="font-extrabold text-[14px] mb-3">
+                POINT OF SALE
+              </h2>
+              <nav class="font-normal text-[14px] text-textlight md:py-1 flex flex-col flex-wrap ">
+                <a class="mb-2 hover:text-white">About</a>
+                <a class="mb-2 hover:text-white">Careers </a>
+                <a class="mb-2 hover:text-white">Press and Media</a>
+                <a class="mb-2 hover:text-white">Shopify Plus</a>
+                <a class="mb-2 hover:text-white">Sitemap</a>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 lg:w-1/6 md:w-1/2 ">
+          <div class="h-full flex flex-col">
+            <div class="w-full">
+              <h2 class="font-extrabold text-[14px] mb-3">
+                SUPPORT
+              </h2>
+              <nav class="font-normal text-[14px] text-textlight md:py-1 flex flex-col flex-wrap ">
+                <a class="mb-2 hover:text-white">About</a>
+                <a class="mb-2 hover:text-white">Careers </a>
+                <a class="mb-2 hover:text-white">Press and Media</a>
+                <a class="mb-2 hover:text-white">Shopify Plus</a>
+                <a class="mb-2 hover:text-white">Sitemap</a>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 lg:w-1/6 md:w-1/2 ">
+          <div class="h-full flex flex-col">
+            <div class="w-full">
+              <h2 class="font-extrabold text-[14px] mb-3">
+                SHOPIFY
+              </h2>
+              <nav class="font-normal text-[14px] text-textlight md:py-1 flex flex-col flex-wrap ">
+                <a class="mb-2 hover:text-white">About</a>
+                <a class="mb-2 hover:text-white">Careers </a>
+                <a class="mb-2 hover:text-white">Press and Media</a>
+                <a class="mb-2 hover:text-white">Shopify Plus</a>
+                <a class="mb-2 hover:text-white">Sitemap</a>
+              </nav>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+
 </body>
+
 </html>
